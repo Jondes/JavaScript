@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Switch statement</title>
+</head>
+
+<body>
+    <h3>Enter your choice</h3>
+    <ul>
+        <li>Add</li>
+        <li>Substract</li>
+        <li>Multiply</li>
+    </ul>
+
+    <form>
+        <input type="text" name="" id="choice">
+        <br>
+        <button onclick="myfunc( )">Click Me</button>
+        <br>
+        <br>
+    </form>
+
+    <script type="text/javascript">
+        function myfunc() {
+            var choice = document.getElementById('choice').value;
+
+            switch (choice) {
+                case 'add':
+                    var a = 10;
+                    var b = 20;
+                    var sum = a + b;
+                    document.write('addition of two numbers is' + sum);
+                    break;
+                case 'substract':
+                    var a = 10;
+                    var b = 20;
+                    var sub = a - b;
+                    document.write('substraction of two numbers is' + sub);
+                    break;
+                case 'multiply':
+                    var a = 10;
+                    var b = 20;
+                    var multi = a * b;
+                    document.write('multiplication of two numbers is' + multi);
+                    break;
+                default:
+                    alert('not a valid input');
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
