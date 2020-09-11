@@ -1,0 +1,40 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+    <script type="text/javascript">
+        function showdata(a, b, c, d, e)
+
+        {
+
+            var v1 = document.getElementById(a).value;
+
+            var v2 = document.getElementById(a).value;
+
+            var v3 = document.getElementById(a).value;
+
+            var v4 = document.getElementById(a).value;
+
+            var v5 = document.getElementById(a).value;
+
+            var v6 = document.getElementById(a).value;
+
+            alert("your select values is" + "\n" + v1 + "\n" + v2 + "\n" + v3 + "\n" + v4 + "\n" + v5);
+
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Date Time Input Types in HTML5</h1>
+    <BR />
+    Select Date: <input type="date" name="mydate" id="mydate" /><br /><br />
+    Select Datetime: <input type="datetime-local" name="datetime1" id="Datetime1" /><br /><br />
+    Select Time: <input type="time" name="time1" id="time1" /><br /><br />
+    Select Month: <input type="month" name="month1" id="month1" /><br /><br />
+    Select Week: <input type="week" name="week1" id="week1" /><br /><br />
+    <input type="button" onclick="showdata('mydate','datetime','time1','month1','week')" value="submit"
+        style="width: 148px; height: 36px; top: 296px; left: 55px; position: absolute" />
+</body>
+
+</html>
