@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Full Page Navigation</title>
+
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+	
+	<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+	<nav>
+		<ul id="navbar">
+			<li>
+				<a href="#home">
+					home
+				</a>
+			</li>
+			<li>
+				<a href="#features">
+					features
+				</a>
+			</li>
+			<li>
+				<a href="#pricing">
+					pricing
+				</a>
+			</li>
+			<li>
+				<a href="#download">
+					download
+				</a>
+			</li>
+			<li>
+				<a href="#contact">
+					contact
+				</a>
+			</li>
+		</ul>
+		
+		<i class="fas fa-bars" id="icon" onclick="navigation()"></i>
+
+	</nav>
+
+	<script type="text/javascript">
+		function navigation(){
+			var icon=document.getElementById("icon");
+			var navbar=document.getElementById("navbar");
+
+			if(icon.classList.contains('fa-bars')){
+				icon.classList.remove('fa-bars');
+				icon.classList.add('fa-times');
+				navbar.style.left = '0';
+			}
+			else{
+				icon.classList.remove('fa-times');
+				icon.classList.add('fa-bars');
+				navbar.style.left = '-100%';
+			}
+
+		}
+
+	</script>
+</body>
+</html>
