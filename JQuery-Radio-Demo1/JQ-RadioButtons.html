@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Get value of selected radio button with Jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+   
+<input type="radio" name="astro" class="astro" value="aswini"> Aswini<br/>
+<input type="radio" name="astro" class="astro" value="bharani"> Bharani<br/>
+<input type="radio" name="astro" class="astro" value="krithika"> Krithika<br/>
+<input type="radio" name="astro" class="astro" value="rohini"> Rohini<br/>
+<input type="radio" name="astro" class="astro" value="ashlesha"> Ashlesha<br/>
+<button>Get Value</button>
+   
+<script type="text/javascript">
+   
+    $("button").click(function(){
+        var val = $("input[type='radio']:checked").val();
+        alert(val);
+    });
+   
+</script>
+  
+</body>
+</html>
