@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<style>
+		p {
+		color: green;
+		}
+	</style>
+	<p>
+		How to trigger a file download when
+		clicking an HTML button or JavaScript?
+	<p>
+		<textarea id="text">
+			Retail Assistant at Tesco December 2017- Jan2021
+Checkout counter and replenishing on the shop floor.
+Excellent Time keeping, Packing and Customer Service.
+Developed skill to stay calm and handle irate customers, executed the skill of welcoming customers with a smile.
+
+Retail Assistant at Iceland Foods December 2013- Jan2017
+My Adaptability and Flexibility was awarded with the Employee of the year for two consecutive years.
+Very Efficient at the Checkout.
+Developed the knack to stay calm and handle irate customers.
+ Executed my Listening and Organizing  skills
+ Welcoming customers with a smile.
+
+Unit Manager –with Wilred Leisure Allied Entertainment Ltd  2006 – 2011
+Worked at 5 different 5 star hotels mainly during start-ups.
+Managing staff of 15 to 30 depending on the size of the Casino.
+Reporting to the hotel GM and the company MD.
+Sent weekly report to MDs in UK and Australia.
+Exceeded Sales goals.
+
+General Tradesman at Fort Aguada Beach Resort a Taj group 2004-2006
+Started my career at a Maintenance & Engineering Department.
+Worked Electrical and plumbing jobs at the entire hotel.
+		</textarea>
+		<br/>
+		<input type="button" id="btn"
+				value="Download" />
+		<script>
+			function download(file, text) {
+			
+				//creating an invisible element
+				var element = document.createElement('a');
+				element.setAttribute('href',
+				'data:text/plain;charset=utf-8, '
+				+ encodeURIComponent(text));
+				element.setAttribute('download', file);
+			
+				// Above code is equivalent to
+				// <a href="path of file" download="file name">
+			
+				document.body.appendChild(element);
+			
+				//onClick property
+				element.click();
+			
+				document.body.removeChild(element);
+			}
+			
+			// Start file download.
+			document.getElementById("btn")
+			.addEventListener("click", function() {
+				// Generate download of hello.txt
+				// file with some content
+				var text = document.getElementById("text").value;
+				var filename = "GFG.txt";
+			
+				download(filename, text);
+			}, false);
+		</script>
+</body>
+</html>
