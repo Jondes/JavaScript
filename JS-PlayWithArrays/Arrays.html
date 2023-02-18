@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Arrays</title>
+</head>
+<body>
+    <h1>JavaScript Arrays</h1>
+    <script>
+        var cars = ['Tesla', 'Toyota', 'BMW', 'Honda', 'Ford', 'Hyundai', 'Nissan', 'Porsche'];
+console.log(cars)
+// ['Tesla', 'Toyota', 'BMW', 'Honda', 'Ford', 'Hyundai', 'Nissan', 'Porsche']
+    
+var cars = ['Tesla', 'Toyota', 'BMW', 'Honda', 'Ford', 'Hyundai', 'Nissan', 'Porsche'];
+console.log(cars.length)
+// 8
+var cars = ['Tesla', 'Toyota', 'BMW', 'Honda', 'Ford', 'Hyundai', 'Nissan', 'Porsche'];
+console.log(cars[0])
+// Tesla
+console.log(cars[4])
+// Ford
+console.log(cars[6])
+// Nissan
+
+var cars = ['Tesla', 'Toyota', 'BMW', 'Honda', 'Ford', 'Hyundai', 'Nissan', 'Porsche'];
+console.log(cars[cars.length - 1])
+// Porsche
+
+var cars = ['Tesla', 'Toyota', 'BMW', 'Honda', 'Ford', 'Hyundai', 'Nissan', 'Porsche'];
+cars.forEach(function(arrayItem, index){
+  console.log(arrayItem, index)
+})
+// Tesla 0
+// Toyota 1
+// BMW 2
+// Honda 3
+// Ford 4
+// Hyundai 5
+// Nissan 6
+// Porsche 7
+
+var cars = ['Tesla', 'Toyota', 'BMW', 'Honda', 'Ford', 'Hyundai', 'Nissan', 'Porsche'];
+// unshift() method adds 'Mercedes' to the starting of 'cars' array
+var newArray = cars.unshift('Mercedes') 
+console.log(cars)
+// New cars array
+// [ 'Mercedes', 'Tesla', 'Toyota', 'BMW', 'Honda', 'Ford', 'Hyundai', 'Nissan', 'Porsche' ]
+    
+    
+var cars = ['Tesla', 'Toyota', 'BMW', 'Honda', 'Ford', 'Hyundai', 'Nissan', 'Porsche'];
+// shift() method removes the first item from the array
+var newArray = cars.shift() 
+console.log(cars)
+// New cars array
+// Tesla has been removed from the array
+// [ 'Toyota', 'BMW', 'Honda', 'Ford', 'Hyundai', 'Nissan', 'Porsche' ]
+
+var cars = ['Tesla', 'Toyota', 'BMW', 'Honda', 'Ford', 'Hyundai', 'Nissan', 'Porsche'];
+// indexOf() method returns the index number of an item in an array
+var getBMWIndex = cars.indexOf('BMW');
+var getHyundaiIndex = cars.indexOf('Hyundai');
+var getPorscheIndex = cars.indexOf('Porsche');
+console.log(getBMWIndex)
+// 2
+console.log(getHyundaiIndex)
+// 5
+console.log(getPorscheIndex)
+// 7
+
+// cars Array
+var carsArray1 = ['Tesla', 'Toyota', 'BMW'];
+var carsArray2 = ['Honda', 'Ford', 'Porsche', 'RR'];
+
+// Add 1 items at the starting of cars array
+// Show carsArray1 result in console
+// Answer will be [ 'Suzuki', 'Tesla', 'Toyota', 'BMW' ]
+carsArray1.splice(0,0, 'Suzuki');
+console.log(carsArray1);
+
+// Add 2 items in cars array at 2nd and 3rd position
+// Show carsArray2 result in console
+// Answer will be [ 'Honda', 'Ford', 'Suzuki', 'Nissan', 'Porsche', 'RR' ]
+carsArray2.splice(2,0, 'Suzuki', 'Nissan')
+console.log(carsArray2);
+    </script>
+</body>
+</html>
